@@ -9,7 +9,6 @@ node {
 
     stage("phpunit") {
         php 'vendor/bin/phpunit'
-		sh 'php artisan test'
     }
 
     stage("codeception") {
