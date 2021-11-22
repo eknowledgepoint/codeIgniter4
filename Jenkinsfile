@@ -16,6 +16,6 @@ node {
     }
 	
 	stage("publish") {
-        sh ' cp -r /var/lib/jenkins/workspace/codeigniter4 /var/www/html/'
+        sh 'sudo cp -r /var/lib/jenkins/workspace/codeigniter4 /var/www/html/'
     }
 }
