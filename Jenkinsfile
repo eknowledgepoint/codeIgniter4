@@ -9,6 +9,7 @@ node {
 
     stage("phpunit") {
         php 'vendor/bin/phpunit'
+		sh 'php artisan test'
     }
 
     stage("codeception") {
@@ -16,6 +17,6 @@ node {
     }
 	
 	stage("publish") {
-        cp '/var/lib/jenkins/workspace/codeigniter 4' '/var/www/html/'
+        sh ' cp /var/lib/jenkins/workspace/codeigniter 4 /var/www/html/'
     }
 }
