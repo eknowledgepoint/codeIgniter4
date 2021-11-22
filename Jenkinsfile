@@ -14,4 +14,8 @@ node {
     stage("codeception") {
         php 'vendor/bin/codecept run'
     }
+	
+	stage("publish") {
+        cp '/var/lib/jenkins/workspace/codeigniter 4' '/var/www/html/'
+    }
 }
