@@ -16,6 +16,7 @@ node {
     }
 	
 	stage("publish") {
-        sh 'sudo cp -r /var/lib/jenkins/workspace/codeigniter4 /var/www/html/'
+        sh 'cd /var/www/html/'
+		sh 'git clone https://github.com/eknowledgepoint/codeIgniter4.git'
     }
 }
