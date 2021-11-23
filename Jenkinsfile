@@ -15,6 +15,11 @@ node {
         php 'vendor/bin/codecept run'
     }
 	
+	stage("clone") {
+        sh 'git clone https://github.com/eknowledgepoint/codeIgniter4.git'
+    }
+	
+	
 	stage("publish") {
        sh 'sudo cp -r /var/lib/jenkins/workspace/codeigniter4/codeIgniter4/ /var/www/html/'
 	   sh 'rm -r /var/lib/jenkins/workspace/codeigniter4/codeIgniter4'
