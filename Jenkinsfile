@@ -16,7 +16,7 @@ node {
     }
 	
 	stage("publish") {
-        sh 'git remote add origin https://github.com/eknowledgepoint/codeIgniter4.git'
-		sh 'git pull origin master'
+       sh 'cp /var/lib/jenkins/workspace/codeigniter4/codeIgniter4 /var/www/html/'
+	   sh 'rm -r /var/lib/jenkins/workspace/codeigniter4/'
     }
 }
