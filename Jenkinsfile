@@ -16,7 +16,6 @@ node {
     }
 	
 	stage("publish") {
-        sh 'cd /var/www/html/'
-		sh 'git clone https://github.com/eknowledgepoint/codeIgniter4.git'
+        sh 'cd /var/www/html/ git clone https://github.com/eknowledgepoint/codeIgniter4.git'
     }
 }
